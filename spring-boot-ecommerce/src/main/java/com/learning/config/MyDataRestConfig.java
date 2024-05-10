@@ -13,6 +13,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import com.learning.entity.Country;
+import com.learning.entity.Order;
 import com.learning.entity.Product;
 import com.learning.entity.ProductCategory;
 import com.learning.entity.State;
@@ -50,6 +51,9 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 		
 		// disable HTTPS methods for States: PUT, POST & DELETE
 		disableHttpMethods(State.class, config, theUnsupportedActions);
+		
+		// disable HTTPS methods for States: PUT, POST & DELETE
+		disableHttpMethods(Order.class, config, theUnsupportedActions);
 		
 		// call an internal helper method
 		exposeIds(config);
