@@ -10,7 +10,6 @@ import com.learning.dto.Purchase;
 import com.learning.dto.PurchaseResponse;
 import com.learning.service.CheckoutService;
 
-@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
