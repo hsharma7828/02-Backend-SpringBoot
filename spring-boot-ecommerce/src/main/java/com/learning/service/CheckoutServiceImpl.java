@@ -90,6 +90,10 @@ public class CheckoutServiceImpl implements CheckoutService{
 		
 		params.put("payment_method_types", paymentMethodTypes);
 		
+		params.put("description", "MYKART Purchase Item");
+		
+		params.put("receipt_email", paymentInfo.getReceiptEmail());
+		
 		return PaymentIntent.create(params);
 	}
 }
